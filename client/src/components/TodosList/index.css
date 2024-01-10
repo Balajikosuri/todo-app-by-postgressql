@@ -27,3 +27,7 @@
     background-color: transparent;
     border: 1px solid green;
 }
+
+.err-img {
+    width: min(240px, 45%);
+}

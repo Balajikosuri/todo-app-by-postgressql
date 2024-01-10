@@ -3,7 +3,7 @@ import { addTodo } from "../../Api/api";
 import "./index.css";
 // import { addTodo } from "../../api/api";
 
-const TodoInput = () => {
+const TodoInput = ({ fetchTodos }) => {
   const [todoDescInput, setTodoDescInput] = useState("");
 
   const handleForm = (e) => {
@@ -17,6 +17,7 @@ const TodoInput = () => {
     if (todoDescInput !== "") {
       await addTodo(data);
       setTodoDescInput("");
+      await fetchTodos();
     } else {
       alert("Please Add Your Task");
     }

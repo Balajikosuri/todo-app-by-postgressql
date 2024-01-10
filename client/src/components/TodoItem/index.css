@@ -3,7 +3,7 @@
     flex-direction: row;
     align-items: center;
     width: 100%;
-    padding: 0px;
+    padding: 0px 28px 0px 12px;
     border-bottom: 1px solid #fff;
     /* background-color: red; */
 }
@@ -13,11 +13,10 @@
     margin-top: 6px;
     margin-right: 5px;
     align-self: flex-start;
+
 }
 
-.todo-item :nth-child(1) :hover {
-    color: greenyellow;
-}
+
 
 .todo-item :nth-child(-1) {
     align-self: flex-end;
@@ -32,8 +31,6 @@
 
 .hover-on-delete-btn :hover {
     color: red;
-
-
 }
 
 .task-comp-incmp-btn {

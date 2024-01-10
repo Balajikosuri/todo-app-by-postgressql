@@ -16,7 +16,7 @@ const App = () => {
   const [todosList, setTodosList] = useState([]);
   const [apiStatus, setApiStatus] = useState(apiStatusConstants.pending);
 
-  useEffect(() => getTodosFromApi, [todosList]);
+  useEffect(() => getTodosFromApi, []);
 
   async function getTodosFromApi() {
     setApiStatus(apiStatusConstants.pending);
@@ -31,6 +31,15 @@ const App = () => {
     }
   }
 
+
+
+
+
+
+
+
+
+
   const activeTodosList =
     todosList.length !== 0
       ? todosList.filter((eachTodo) => eachTodo.completed === true)
@@ -44,7 +53,7 @@ const App = () => {
   return (
     <div className="Todo-container">
       <TaskHeader todosList={todosList} />
-      <TodoInput />
+      <TodoInput fetchTodos={getTodosFromApi} />
       <hr
         style={{
           width: "90%",
@@ -62,14 +71,22 @@ const App = () => {
           path="/"
           exact
           element={
-            <TodosList apiStatus={apiStatus} todosList={InActiveTodosList} />
+            <TodosList
+              fetchTodos={getTodosFromApi}
+              apiStatus={apiStatus}
+              todosList={InActiveTodosList}
+            />
           }
         />
         <Route
           path="/completed"
           exact
           element={
-            <TodosList apiStatus={apiStatus} todosList={activeTodosList} />
+            <TodosList
+              fetchTodos={getTodosFromApi}
+              apiStatus={apiStatus}
+              todosList={activeTodosList}
+            />
           }
         />
       </Routes>

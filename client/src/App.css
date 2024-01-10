@@ -42,7 +42,7 @@ body {
   transform: translate(-50%, -50%);
   background-color: #393F49;
   border-radius: 5px;
-  padding: 24px;
+  padding: 36px;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
   flex-direction: column;
   gap: 25px;

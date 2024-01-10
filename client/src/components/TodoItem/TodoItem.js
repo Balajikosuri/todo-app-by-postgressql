@@ -5,7 +5,7 @@ import { deleteTodo, editTodo } from "../../Api/api";
 
 // const handleTogleEdit = () => {};
 
-const TodoItem = ({ todo }) => {
+const TodoItem = ({ todo, fetchTodos }) => {
   const [editOption, setEditOption] = useState(false);
 
   const handleDeleTodo = async (todoId) => {
@@ -15,6 +15,7 @@ const TodoItem = ({ todo }) => {
 
     if (confirmed) {
       await deleteTodo(todoId);
+      await fetchTodos();
     }
   };
 
@@ -30,6 +31,7 @@ const TodoItem = ({ todo }) => {
 
     try {
       await editTodo(todoId, updateData);
+      await fetchTodos();
     } catch (error) {
       console.log(error);
     }
@@ -43,7 +45,9 @@ const TodoItem = ({ todo }) => {
     setEditOption(false);
   };
 
-  const handleTodoDesChange = () => {};
+  const handleTodoDesChange = () => {
+    fetchTodos();
+  };
   // console.log(editOption);
   return (
     <li className="todo-item">
