@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.tasks-tab-container {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.date {
+    color: white;
+    font-weight: bold;
+    
+}
+
+.active-tasks-count {
+    color: rgb(157, 255, 0);
+    font-weight: 600;
+}
+
+.tasks-tab-btn {
+    color: #ffffff60;
+    background-color: transparent;
+
+}
+
+.navLink {
+    color: #ffffff60;
+    text-decoration: none;
+}

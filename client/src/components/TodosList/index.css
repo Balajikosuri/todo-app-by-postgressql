@@ -1,0 +1,29 @@
+.TodosListContainer {
+    width: 100%;
+    overflow-y: auto;
+    /* border: 1px solid red; */
+    margin-top: 16px;
+    padding: 0px;
+}
+
+.empty-active-tasks {
+    color: white;
+    font-weight: 500;
+
+}
+
+.empty-active-tasks span {
+    color: rgb(195, 0, 255);
+    font-size: 18px;
+
+}
+
+.empty-tasks-container {
+    width: 100%;
+    text-align: center;
+}
+
+#column-bg {
+    background-color: transparent;
+    border: 1px solid green;
+}

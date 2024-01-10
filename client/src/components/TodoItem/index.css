@@ -1,0 +1,60 @@
+.todo-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 0px;
+    border-bottom: 1px solid #fff;
+    /* background-color: red; */
+}
+
+
+.todo-item :nth-child(1) {
+    margin-top: 6px;
+    margin-right: 5px;
+    align-self: flex-start;
+}
+
+.todo-item :nth-child(1) :hover {
+    color: greenyellow;
+}
+
+.todo-item :nth-child(-1) {
+    align-self: flex-end;
+    padding-bottom: 8px;
+}
+
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    /* align-self: flex-end; */
+}
+
+.hover-on-delete-btn :hover {
+    color: red;
+
+
+}
+
+.task-comp-incmp-btn {
+    background-color: transparent;
+    border: none;
+}
+
+
+
+.todo-desc {
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.trash-container {
+    align-self: flex-end;
+    margin-bottom: 8px;
+}
+
+.check-btn {
+    /* margin-right: 5px; */
+}

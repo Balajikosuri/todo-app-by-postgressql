@@ -1,0 +1,22 @@
+.TodoInput {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.add-task-btn {
+    padding: 12px 14px;
+    color: white;
+    background-color: #61DBFB;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.todo-desc-input {
+    padding: 10px 5px;
+    width: 50%;
+
+}

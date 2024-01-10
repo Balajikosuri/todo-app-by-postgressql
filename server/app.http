@@ -1,0 +1,18 @@
+GET http://localhost:5000/todos/
+
+
+
+###
+GET http://localhost:5000/todos/9
+###
+
+PUT http://localhost:5000/todos/update-todo/9
+
+{
+            
+            "description": "balaji kosuri",
+            "status": true
+}
+
+####
+DELETE http://localhost:5000/todos/delete-todo/9
