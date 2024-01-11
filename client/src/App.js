@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getTodos } from "./Api/api";
-
+import "./App.css";
 import TaskHeader from "./components/TaskHeader/TaskHeader";
 import TodoInput from "./components/TodoInput/TodoInput";
 import TodosList from "./components/TodosList/TodosList";
@@ -47,45 +47,47 @@ const App = () => {
       : [];
 
   return (
-    <div className="Todo-container">
-      <TaskHeader todosList={todosList} />
-      <TodoInput fetchTodos={getTodosFromApi} />
-      <hr
-        style={{
-          width: "90%",
-          textAlign: "center",
-          marginLeft: "auto",
-          marginRight: "auto",
-          padding: "0px",
-          height: "3px",
-          backgroundColor: "#fff",
-          marginBottom: "0px",
-        }}
-      />
-      <Routes>
-        <Route
-          path="/"
-          exact
-          element={
-            <TodosList
-              fetchTodos={getTodosFromApi}
-              apiStatus={apiStatus}
-              todosList={reversedList(InActiveTodosList)}
-            />
-          }
+    <div className="app">
+      <div className="Todo-container">
+        <TaskHeader todosList={todosList} />
+        <TodoInput fetchTodos={getTodosFromApi} />
+        <hr
+          style={{
+            width: "90%",
+            textAlign: "center",
+            marginLeft: "auto",
+            marginRight: "auto",
+            padding: "0px",
+            height: "3px",
+            backgroundColor: "#fff",
+            marginBottom: "0px",
+          }}
         />
-        <Route
-          path="/completed"
-          exact
-          element={
-            <TodosList
-              fetchTodos={getTodosFromApi}
-              apiStatus={apiStatus}
-              todosList={reversedList(activeTodosList)}
-            />
-          }
-        />
-      </Routes>
+        <Routes>
+          <Route
+            path="/"
+            exact
+            element={
+              <TodosList
+                fetchTodos={getTodosFromApi}
+                apiStatus={apiStatus}
+                todosList={reversedList(InActiveTodosList)}
+              />
+            }
+          />
+          <Route
+            path="/completed"
+            exact
+            element={
+              <TodosList
+                fetchTodos={getTodosFromApi}
+                apiStatus={apiStatus}
+                todosList={reversedList(activeTodosList)}
+              />
+            }
+          />
+        </Routes>
+      </div>
     </div>
   );
 };
