@@ -16,7 +16,9 @@ const App = () => {
   const [todosList, setTodosList] = useState([]);
   const [apiStatus, setApiStatus] = useState(apiStatusConstants.pending);
 
-  useEffect(() => getTodosFromApi(), []);
+  useEffect(() => {
+    getTodosFromApi();
+  }, []);
 
   async function getTodosFromApi() {
     setApiStatus(apiStatusConstants.pending);
@@ -24,6 +26,7 @@ const App = () => {
       const response = await getTodos();
       const { data } = await response.data;
       setTodosList(data);
+      console.log(data);
       setApiStatus(apiStatusConstants.success);
     } catch (error) {
       setApiStatus(apiStatusConstants.failure);
@@ -31,14 +34,7 @@ const App = () => {
     }
   }
 
-
-
-
-
-
-
-
-
+  const reversedList = (list) => list.slice().reverse();
 
   const activeTodosList =
     todosList.length !== 0
@@ -74,7 +70,7 @@ const App = () => {
             <TodosList
               fetchTodos={getTodosFromApi}
               apiStatus={apiStatus}
-              todosList={InActiveTodosList}
+              todosList={reversedList(InActiveTodosList)}
             />
           }
         />
@@ -85,7 +81,7 @@ const App = () => {
             <TodosList
               fetchTodos={getTodosFromApi}
               apiStatus={apiStatus}
-              todosList={activeTodosList}
+              todosList={reversedList(activeTodosList)}
             />
           }
         />
