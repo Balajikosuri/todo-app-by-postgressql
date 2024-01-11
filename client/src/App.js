@@ -16,7 +16,7 @@ const App = () => {
   const [todosList, setTodosList] = useState([]);
   const [apiStatus, setApiStatus] = useState(apiStatusConstants.pending);
 
-  useEffect(() => getTodosFromApi, []);
+  useEffect(() => getTodosFromApi(), []);
 
   async function getTodosFromApi() {
     setApiStatus(apiStatusConstants.pending);
