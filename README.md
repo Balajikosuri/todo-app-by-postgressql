@@ -3,6 +3,7 @@
 This is a simple full-stack application that uses PostgreSQL as the database, Node.js with a connection pool for the backend server, and React for the frontend.
 
 ## sample
+## demo url : https://todos-app-postgressql.onrender.com/
 
 ![1](<client/public/imgs/Screenshot (953).png>)
 
