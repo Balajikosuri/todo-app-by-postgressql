@@ -36,6 +36,8 @@
 .task-comp-incmp-btn {
     background-color: transparent;
     border: none;
+    margin-right: 16px;
+    margin-bottom: 8px;
 }
 
 
@@ -54,4 +56,9 @@
 
 .check-btn {
     /* margin-right: 5px; */
+}
+
+.tick {
+    margin-bottom: 9px;
+
 }

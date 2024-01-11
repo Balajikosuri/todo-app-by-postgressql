@@ -5,7 +5,7 @@ import "./index.css";
 const TaskHeader = ({ todosList }) => {
   return (
     <div className="header">
-      <div>
+      <div style={{ marginBottom: "13px" }}>
         <p className="date">{getFormattedData()}</p>
         <span className="active-tasks-count">
           {getActiveTasksCount(todosList)} Active Tasks

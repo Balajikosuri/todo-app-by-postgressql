@@ -10,6 +10,9 @@ body {
 .active {
   color: #fff !important;
   font-weight: bolder;
+  border: 1px solid #ffffff90;
+  border-radius: 16px;
+  padding: 10px;
 }
 
 button {

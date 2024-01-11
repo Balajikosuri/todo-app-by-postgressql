@@ -57,9 +57,9 @@ const TodoItem = ({ todo, fetchTodos }) => {
         className="task-comp-incmp-btn"
       >
         {todo.completed ? (
-          <FaCheckCircle color="green" size={20} />
+          <FaCheckCircle className="tick" color="green" size={30} />
         ) : (
-          <FaCheckCircle color="#1a1918" size={20} />
+          <FaCheckCircle className="tick" color="#1a1918" size={30} />
         )}
       </button>
       {!editOption ? (
@@ -90,7 +90,7 @@ const TodoItem = ({ todo, fetchTodos }) => {
         />
       )}
       <button onClick={() => handleDeleTodo(todo.id)} className="delete-btn">
-        <FaTrashAlt className="hover-on-delete-btn" color="#1a1918" size={18} />
+        <FaTrashAlt className="hover-on-delete-btn" color="#1a1918" size={26} />
       </button>
     </li>
   );

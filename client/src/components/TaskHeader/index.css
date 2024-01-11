@@ -2,7 +2,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-
+    flex-wrap: wrap
 }
 
 .tasks-tab-container {
@@ -15,7 +15,7 @@
 .date {
     color: white;
     font-weight: bold;
-    
+
 }
 
 .active-tasks-count {
