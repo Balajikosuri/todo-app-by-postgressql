@@ -1,7 +1,7 @@
 import axios from "axios";
 
-//  const BaseUrl = "https://todo-postgressql-api.onrender.com/todos";
-const BaseUrl = "http://localhost:5001/todos";
+ const BaseUrl = "https://todo-postgressql-api.onrender.com/todos";
+// const BaseUrl = "http://localhost:5000/todos";
 
 export const getTodos = async () => {
   const response = await axios.get(BaseUrl);
