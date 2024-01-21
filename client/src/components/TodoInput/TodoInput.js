@@ -33,11 +33,11 @@ const TodoInput = ({ fetchTodos }) => {
         type="text"
         placeholder="Enter a Task ...."
         onChange={(e) => handleTodoDesInput(e)}
-        className="todo-desc-input"
+        className="todo-desc-input input-bar"
       />
       <button
         onClick={() => handleAddTodo(todoDescInput)}
-        className="add-task-btn"
+        className="add-task-btn input-bar"
         type="submit"
       >
         Add Task

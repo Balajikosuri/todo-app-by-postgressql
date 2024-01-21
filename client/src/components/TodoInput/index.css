@@ -20,3 +20,22 @@
     width: 50%;
 
 }
+
+@media screen and (max-width:540px) {
+    .TodoInput {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .todo-desc-input {
+        width: 100%;
+    }
+
+    .add-task-btn {
+        width: 60px;
+        font-size: 10px;
+        padding: 6px;
+    }
+
+
+}

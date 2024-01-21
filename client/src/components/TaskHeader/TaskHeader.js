@@ -13,12 +13,12 @@ const TaskHeader = ({ todosList }) => {
       </div>
       <ul className="tasks-tab-container">
         <li>
-          <NavLink className="navLink" to="/">
+          <NavLink className="navLink tasks-btn" to="/">
             incomplete Tasks
           </NavLink>
         </li>
         <li>
-          <NavLink className="navLink" to="/completed">
+          <NavLink className="navLink tasks-btn" to="/completed">
             completed Tasks
           </NavLink>
         </li>

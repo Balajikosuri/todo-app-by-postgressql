@@ -9,7 +9,7 @@
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 26px;
+    /* gap: 26px; */
 }
 
 .date {
@@ -27,9 +27,29 @@
     color: #ffffff60;
     background-color: transparent;
 
+
 }
 
 .navLink {
     color: #ffffff60;
     text-decoration: none;
+}
+
+.tasks-btn {
+    margin-right: 16px;
+    padding: 6px;
+    font-size: 16px;
+}
+
+@media screen and (max-width:540px) {
+    .tasks-btn {
+        font-size: 12px;
+        padding: 5px;
+        flex-shrink: 3;
+        border: none;
+        line-height: 0px;
+    }
+
+
+
 }

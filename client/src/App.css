@@ -39,3 +39,11 @@
   flex-direction: column;
   gap: 25px;
 }
+
+@media screen and (max-width:540px) {
+  .Todo-container {
+    width: 95%;
+    height: 95%;
+  }
+
+}
